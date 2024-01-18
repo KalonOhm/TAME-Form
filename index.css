@@ -33,6 +33,7 @@ p {
   align-items: left;
   border: 2px solid #ccc;
   border-radius: 8px;
+  padding-top: 6px;
 }
 
 .h1 {
