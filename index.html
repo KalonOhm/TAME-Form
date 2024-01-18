@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="formContainer">
+        <div class="h1">TAME'S COVER PET CONTEST 2024</div>
+        <div class="form">
+          <!-- GitHub Copilot, I need a reminder on what to include in a form -->
+          <form action="index.php" method="post">
+            <p>
+              <label for="petname">Pet's Name*</label>
+            </p>
+            <p><input type="text" id="petname" name="petname" /><br /><br /></p>
+            <p>
+              <label for="name">Guardian's Name*</label>
+            </p>
+            <p><input type="text" id="name" name="name" /><br /><br /></p>
+            <p>
+              <label for="address">Address of Pet/Guardian*</label>
+            </p>
+            <p><input type="text" id="address" name="address" /><br /><br /></p>
+            <p>
+              <label for="email">Email address of Pet's Guardian*</label>
+            </p>
+            <p><input type="text" id="email" name="email" /><br /><br /></p>
+            <p>
+              <label for="phone">Phone # of Pet's Guardian*</label>
+            </p>
+            <p><input type="text" id="phone" name="phone" /><br /><br /></p>
+            <p>
+              <label for="age">Pet's Age*</label>
+            </p>
+            <p><input type="text" id="age" name="age" /><br /><br /></p>
+            <p>
+              <label for="breed">Pet's Breed/Mix (best guess)*</label>
+            </p>
+            <p><input type="text" id="breed" name="breed" /><br /><br /></p>
+
+            <div class="img-preview-containter">
+              <div class="preview">
+                <img
+                  id="preview-selected-image"
+                  alt="Pet image to be uploaded"
+                />
+              </div>
+              <label for="photo">Upload ONE image of your pet*</label>
+              <input
+                type="file"
+                id="photo"
+                accept="image/*"
+                name="photo"
+                onchange="previewImage(event);"
+              /><br /><br />
+            </div>
+
+            <p>
+              <label for="bio">
+                Tell us why your pet should be on the cover of the Spring/Summer
+                issue (500 word max)*
+              </label>
+            </p>
+            <p>
+              <textarea
+                type="paragraph"
+                id="bio"
+                name="bio"
+                maxlength="500"
+              ></textarea
+              ><br /><br />
+            </p>
+            <div style="margin-bottom: 1.5rem;">[recaptcha]</div>
+            <p style="text-align: center;">
+              <input type="submit" value="Submit!" />
+            </p>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
