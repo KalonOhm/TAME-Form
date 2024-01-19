@@ -1,6 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form");
 
+  const wordCount = document.getElementById("bio");
+  const displayCount = document.getElementById("word-count");
+  const wordsLeft = document.getElementById("words-left");
+
+  wordCount.addEventListener("keyup", function () {
+    let words = 0;
+    if (this.value.match(/\S+/g) != null) {
+      words = this.value.match(/\S+/g).length;
+    }
+
+    if (words > 500) {
+      let trimmed = this.value.split(/\s+/, 500).join(" ");
+      this.value = trimmed + " ";
+    } else {
+      displayCount.textContent = words;
+      wordsLeft.textContent = 500 - words;
+    }
+  });
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(form);
@@ -28,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const imgSrc = URL.createObjectURL(imageUpload);
 
       const imagePreview = document.getElementById("preview-selected-image");
-      
+
       imagePreview.src = imgSrc;
 
       imagePreview.style.display = "block";
@@ -36,5 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   form.addEventListener("submit", handleFormSubmit);
-  document.getElementById("photo").addEventListener("change", handleImagePreview);
+  document
+    .getElementById("photo")
+    .addEventListener("change", handleImagePreview);
 });

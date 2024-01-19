@@ -67,9 +67,9 @@ input {
 
 .img-preview-containter {
   width: 50%;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 3rem;
+  padding: 3em;
   border-radius: 8px;
 }
 
@@ -85,14 +85,12 @@ input {
 
 .img-preview-containter label {
   display: block;
-  width: 45%;
-  height: 80px;
-  margin-left: 25%;
+  width: 75%;
+  height: 60px;
+  margin: auto;
   text-align: center;
   background: #ccc;
   font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 400;
   border-radius: 16px;
   cursor: pointer;
   display: flex;
